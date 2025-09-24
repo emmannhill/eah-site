@@ -267,3 +267,37 @@ p {
   text-transform: uppercase;
   color: #404042;
 }
+
+.ecom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 800px;
+  margin: 20px auto 0;
+}
+
+.ecom-grid a {
+  display: block;
+  overflow: hidden;
+  border-radius: 2px;
+  aspect-ratio: 913 / 571;
+}
+
+.ecom-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.ecom-grid a:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 640px) {
+  .ecom-grid {
+    grid-template-columns: 1fr;
+  }
+}
