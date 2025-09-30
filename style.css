@@ -268,6 +268,8 @@ p {
   color: #404042;
 }
 
+/*/////////// ECOM SECTION ///////////*/
+
 .ecom-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -298,6 +300,81 @@ p {
 
 @media (max-width: 640px) {
   .ecom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*/////////// FONT FOUNDRY ///////////*/
+
+.font-foundry-container {
+  position: relative;
+  text-align: center;
+  margin: 8rem auto;
+  padding: 1rem 0;
+  background-color: #f4efef;
+  overflow: visible;
+  z-index: 1;
+}
+
+.font-foundry-container::before,
+.font-foundry-container::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 100vw;
+  height: 50px;
+  background-image: url("images/scallop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.font-foundry-container::before {
+  bottom: 100%;
+  margin-bottom: -1px;
+  transform: translateX(-50%) scaleY(-1);
+}
+
+.font-foundry-container::after {
+  top: 100%;
+  margin-top: -1px;
+}
+
+.fonts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 800px;
+  margin: 20px auto 0;
+}
+
+.fonts-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.browse-fonts {
+  display: inline-block;
+  margin: 2rem 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #9f7e7c;
+}
+
+.browse-fonts:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .fonts-grid {
     grid-template-columns: 1fr;
   }
 }
