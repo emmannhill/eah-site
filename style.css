@@ -206,7 +206,7 @@ p {
 
 .intro-body {
   font-weight: 200;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   padding: 0rem 0 1rem 0;
 }
 
@@ -256,10 +256,11 @@ p {
 }
 
 .sandcastle-title {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 800;
   text-transform: uppercase;
   color: #404042;
+  line-height: 31px;
 }
 
 /*/ ////////// REPEATED PROJECT CODE ///////////*/
@@ -376,15 +377,6 @@ p {
   display: block;
 }
 
-.fonts-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1);
-  transition: transform 0.4s ease;
-  display: block;
-}
-
 .fonts-grid a:hover img {
   transform: scale(1.02);
 }
@@ -465,11 +457,10 @@ p {
 }
 
 .extracurricular-text {
-  margin: 0 0 0.5rem 0;
-  font-size: 0.95rem;
-  font-weight: 300;
-  letter-spacing: 0.7px;
-  line-height: 25px;
+  font-weight: 200;
+  letter-spacing: 0.8px;
+  padding: 0rem 0 1rem 0;
+  text-wrap: balance;
 }
 
 .subscribe-button {
@@ -608,5 +599,50 @@ p {
   }
   .extracurricular-intro {
     font-size: 0.9rem;
+  }
+  .extracurricular-item img {
+    padding-top: 3rem;
+  }
+}
+
+/*/////////// FONTS PAGE ///////////*/
+
+.page-fonts-title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #404042;
+  padding-top: 1rem;
+}
+
+.page-fonts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  max-width: 80%;
+  margin: 6rem auto 0;
+}
+
+.page-fonts-grid a {
+  overflow: hidden;
+}
+
+.page-fonts-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.page-fonts-grid a:hover img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 640px) {
+  .page-fonts-grid {
+    max-width: 90%;
   }
 }
