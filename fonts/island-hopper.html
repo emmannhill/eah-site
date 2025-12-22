@@ -16,6 +16,92 @@
     <link rel="shortcut icon" href="/images/eah-favicon.png" />
   </head>
   <body>
+    <script>
+      window.SnipcartSettings = {
+        publicApiKey:
+          "NTJmYjRmMGMtNjhlOC00YWUzLWEzN2QtZjM2MWQxOWNiYTNmNjM5MDE3OTAwNTM0MTA4NzU1",
+        loadStrategy: "on-user-interaction",
+        modalStyle: "side",
+      };
+
+      (() => {
+        var c, d;
+        (d = (c = window.SnipcartSettings).version) != null ||
+          (c.version = "3.0");
+        var s, S;
+        (S = (s = window.SnipcartSettings).timeoutDuration) != null ||
+          (s.timeoutDuration = 2750);
+        var l, p;
+        (p = (l = window.SnipcartSettings).domain) != null ||
+          (l.domain = "cdn.snipcart.com");
+        var w, u;
+        (u = (w = window.SnipcartSettings).protocol) != null ||
+          (w.protocol = "https");
+        var f =
+            window.SnipcartSettings.version.includes("v3.0.0-ci") ||
+            (window.SnipcartSettings.version != "3.0" &&
+              window.SnipcartSettings.version.localeCompare("3.4.0", void 0, {
+                numeric: !0,
+                sensitivity: "base",
+              }) === -1),
+          m = ["focus", "mouseover", "touchmove", "scroll", "keydown"];
+        window.LoadSnipcart = o;
+        document.readyState === "loading"
+          ? document.addEventListener("DOMContentLoaded", r)
+          : r();
+        function r() {
+          window.SnipcartSettings.loadStrategy
+            ? window.SnipcartSettings.loadStrategy === "on-user-interaction" &&
+              (m.forEach((t) => document.addEventListener(t, o)),
+              setTimeout(o, window.SnipcartSettings.timeoutDuration))
+            : o();
+        }
+        var a = !1;
+        function o() {
+          if (a) return;
+          a = !0;
+          let t = document.getElementsByTagName("head")[0],
+            e = document.querySelector("#snipcart"),
+            i = document.querySelector(
+              `src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`
+            ),
+            n = document.querySelector(
+              `link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`
+            );
+          e ||
+            ((e = document.createElement("div")),
+            (e.id = "snipcart"),
+            e.setAttribute("hidden", "true"),
+            document.body.appendChild(e)),
+            v(e),
+            i ||
+              ((i = document.createElement("script")),
+              (i.src = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`),
+              (i.async = !0),
+              t.appendChild(i)),
+            n ||
+              ((n = document.createElement("link")),
+              (n.rel = "stylesheet"),
+              (n.type = "text/css"),
+              (n.href = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`),
+              t.prepend(n)),
+            m.forEach((g) => document.removeEventListener(g, o));
+        }
+        function v(t) {
+          !f ||
+            ((t.dataset.apiKey = window.SnipcartSettings.publicApiKey),
+            window.SnipcartSettings.addProductBehavior &&
+              (t.dataset.configAddProductBehavior =
+                window.SnipcartSettings.addProductBehavior),
+            window.SnipcartSettings.modalStyle &&
+              (t.dataset.configModalStyle = window.SnipcartSettings.modalStyle),
+            window.SnipcartSettings.currency &&
+              (t.dataset.currency = window.SnipcartSettings.currency),
+            window.SnipcartSettings.templatesUrl &&
+              (t.dataset.templatesUrl = window.SnipcartSettings.templatesUrl));
+        }
+      })();
+    </script>
     <header class="site-header">
       <div class="container">
         <div class="logo">
@@ -45,26 +131,154 @@
         </button>
       </div>
     </header>
+    <section>
+      <div class="intro-section"><br /></div>
 
-    <section class="intro-section">
-      <div class="dot-divider">
-        <img src="/images/dots.png" alt="" />
+      <div class="indiv-font-grid">
+        <!-- Left column: 4-image grid -->
+        <div class="indiv-font-images">
+          <a href="#" target="_blank" rel="noopener">
+            <img
+              src="/images/island-hopper-tile-A.jpg"
+              alt=""
+              width="1200"
+              height="800"
+            />
+          </a>
+
+          <a href="#" target="_blank" rel="noopener">
+            <img
+              src="/images/island-hopper-tile-B.jpg"
+              alt=""
+              width="1200"
+              height="800"
+            />
+          </a>
+
+          <a href="#" target="_blank" rel="noopener">
+            <img
+              src="/images/island-hopper-tile-C.jpg"
+              alt=""
+              width="1200"
+              height="800"
+            />
+          </a>
+
+          <a href="#" target="_blank" rel="noopener">
+            <img
+              src="/images/island-hopper-tile-D.jpg"
+              alt=""
+              width="1200"
+              height="800"
+            />
+          </a>
+        </div>
+
+        <!-- Right column: content -->
+        <div class="indiv-font-content">
+          <h3>Island Hopper</h3>
+          <div class="product-price">$20.00</div>
+          <div class="product-copy">
+            A laid-back, sans serif font inspired by salty tides and quick
+            flights. Hand-illustrated with relaxed letterforms and subtle
+            irregularities, making it ideal for branding, packaging, and casual
+            display headlines.
+          </div>
+          <div class="product-highlights product-copy">
+            <ul class="product-highlights__list">
+              <li class="product-highlights__item">
+                <img
+                  src="/images/icon-check.svg"
+                  class="product-highlights__icon"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span>OTF Font File</span>
+              </li>
+
+              <li class="product-highlights__item">
+                <img
+                  src="/images/icon-check.svg"
+                  class="product-highlights__icon"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span>Licensed for Personal & Commercial Use</span>
+              </li>
+
+              <li class="product-highlights__item">
+                <img
+                  src="/images/icon-check.svg"
+                  class="product-highlights__icon"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span>Uppercase Letterforms, Numbers & Symbols</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="add-to-cart-button snipcart-add-item"
+            data-item-id="island-hopper"
+            data-item-price="20.00"
+            data-item-description="Island Hopper OTF Font."
+            data-item-image="/images/island-hopper-tile-A.jpg"
+            data-item-name="Island Hopper Font"
+          >
+            Add to Cart
+          </div>
+          <div class="dot-divider-product">
+            <img src="/images/dots.png" alt="" />
+          </div>
+          <div class="product-faqs">
+            <div class="product-faqs-header">What’s Included?</div>
+            <div class="product-faqs">
+              After purchase, you’ll receive a download link for a ZIP file
+              containing the OTF font file and a PDF with installation
+              instructions and licensing details.
+            </div>
+            <div class="product-faqs-header">One License = One User</div>
+            <div class="product-faqs">
+              If someone else wants to use the font, they’ll need their own
+              license. Organizations with up to 50 employees may use a single
+              license internally. Larger organizations must reach out for custom
+              extended licensing.
+            </div>
+            <div class="product-faqs-header">
+              You'll also need a custom extended license if:
+            </div>
+            <div class="product-faqs">
+              <ul>
+                <li>Your website receives over 10,000 monthly page views</li>
+                <li>Your business earns over $1M annually</li>
+                <li>
+                  The font is used for film or TV titles, logos, or credits
+                </li>
+                <li>The font appears in magazines or newspapers</li>
+                <li>
+                  The font is used in a national or international advertising
+                  campaign
+                </li>
+                <li>
+                  The font is embedded in apps, software, eBooks, or
+                  mass-distributed digital files
+                </li>
+              </ul>
+            </div>
+            <div class="product-faqs-header">Questions?</div>
+            <div class="product-faqs">
+              If you’re unsure which license you need or have any other
+              questions, email hello@emilyannhill.com. These terms help protect
+              the work that goes into creating each font while giving you the
+              freedom to make something great. Thanks for supporting independent
+              type design!
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="intro-container">
-        <div class="page-fonts-title">Island Hopper</div>
-      </div>
+      <a href="/fonts.html" class="back-button">← Back to Fonts</a>
     </section>
-
-    <div class="page-fonts-grid">
-      <a href="#" target="_blank" rel="noopener">
-        <img
-          src="/images/island-hopper-tile-A.jpg"
-          alt=""
-          width="1200"
-          height="800"
-        />
-      </a>
-    </div>
     <footer class="footer">
       <div>© 2025 Emily Ann Hill</div>
     </footer>
